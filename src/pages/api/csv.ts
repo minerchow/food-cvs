@@ -44,7 +44,7 @@ export default function handler(
   .on('end', () => {
     const datas = table.filter(item => item.locationid === req.query.name);
     // console.log(req)
-    console.log(datas)
+    // console.log(datas)
     res.status(200).json({ result : req.query.name ? datas : table});
   });
   

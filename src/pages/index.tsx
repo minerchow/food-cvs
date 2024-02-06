@@ -37,7 +37,7 @@ export default function Home() {
    const [tableData,setTableData] = useState<IData[]>([]);
    const [options,setOptions] = useState([])
    const getData = async(options:{locationId:string}) => {
-      const res =  await axios.get(`/api/hello?name=${options.locationId}`);
+      const res =  await axios.get(`/api/csv?name=${options.locationId}`);
       let table :any= []
       if(res.status === 200 && res.data && res.data.result){
           table = uniqBy(res.data.result,'Applicant')
